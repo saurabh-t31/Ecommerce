@@ -1,54 +1,43 @@
-/* styles.css */
-body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
-}
-
-.navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.navbar-brand img {
-    width: 100px;
-}
-
-.nav-link {
-    font-size: 16px;
-    color: #333333 !important;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: #007bff !important;
-}
-
-.form-control {
-    border-radius: 20px;
-}
-
-.badge {
-    background-color: #007bff;
-}
-
-.nav-item .fas {
-    margin-right: 5px;
-}
-
-.container {
-    margin-top: 20px;
-}
-
-/* Home Page Specific Styles */
+/* Banner Section */
 .banner {
-
-    background: url("../images/banner.png")center/cover no-repeat;
-    height: 800px;
-    padding-bottom: 100px;
-    color: #ffffff;
+    background: url('https://krbakes.com/cdn/shop/collections/Fresh_1.webp?v=1729921652') no-repeat center center/cover;
+    height: 60vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    font-weight: bold;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.banner .btn {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Optional: For the 'Shop Now' button */
+.banner .btn-light {
+    background-color: #fff;
+    color: #007bff;
+    font-weight: 600;
 }

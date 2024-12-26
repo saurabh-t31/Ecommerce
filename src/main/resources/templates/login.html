@@ -9,10 +9,10 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+          <link rel="stylesheet" th:href="@{/css/login.css}">
     <title>Document</title>
 </head>
 <body>
-
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <div class="container-fluid">
@@ -27,10 +27,10 @@
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/}" href="#">home</a>
+                    <a class="nav-link" th:href="@{/}" href="#">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/shop}" href="#">shop</a>
+                    <a class="nav-link" th:href="@{/shop}" href="#">Shop</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Sign Up</a>
@@ -43,9 +43,9 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <h2>Login</h2>
-            <p>Please fill out this to login</p>
+            <p>Please login to access your account</p>
             <form th:action="@{/login}" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -56,32 +56,31 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control form-control-lg" placeholder="Password" name="password" id="password">
                 </div>
-    <!-- Display error message -->
-    <div th:if="${param.error != null}" class="error-message" style="color: red; align-content: center; font-size: larger;">
-        ** Wrong Username or Password. Try again!!**
-     </div>
-     <div th:if="${param.logout!=null}" style="color: rgb(87, 132, 20); align-content: center; font-size: larger;font-weight: 500;">
-        You have Logged Out Succesfully !!
-     </div>
-     <div th:if="${param.register!=null}" style="color: red; align-content: center; font-size: larger;">
-        You Have Registered Succesfullyv!! Please Login!!
-     </div>
 
-                <input type="submit" value="Login" class="btn btn-primary btn-block">
-                <br>
-                <span >Don't have an account <a class="linkControl" href="./register.html"
-                                                th:href="@{/register}">Register here</a></span>
-                <br>
-                <a href="" th:href="@{/forgotpassword}">Forgot password ?</a>
+                <!-- Display error message -->
+                <div th:if="${param.error != null}" class="error-message red">
+                    ** Wrong Username or Password. Try again!! **
+                </div>
+                <div th:if="${param.logout!=null}" class="error-message green">
+                    You have Logged Out Successfully !!
+                </div>
+                <div th:if="${param.register!=null}" class="error-message green">
+                    You Have Registered Successfully!! Please Login!!
+                </div>
+
+                <input type="submit" value="Login" class="btn btn-primary">
             </form>
-            <br>
-            <h3>OR</h3>
-            <a href="/oauth2/authorization/google" class="btn btn-primary">Sign-In with google </a>
 
+            <!-- Google Sign-In Button -->
+            <a href="/oauth2/authorization/google" class="google-btn">Sign in with Google</a>
+
+            <div class="additional-links">
+                <a class="linkControl" href="./register.html" th:href="@{/register}">Don't have an account? Register here</a>
+            </div>
         </div>
-
     </div>
 </div>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

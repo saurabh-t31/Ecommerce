@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar .nav-link {
+    color: white;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+/* Sidebar (Categories Section) */
+.col-sm-3 {
+    text-align: left; /* Align categories to the left */
+    margin-left: 10px; /* Add some spacing from the left edge */
+}
+
+.col-sm-3 h4 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list-group {
+    width: 90%; /* Reduce width to make space feel balanced */
+    margin: 0 auto; /* Center-align within the container */
+}
+
+.container .list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add padding for a cleaner look */
+}
+
+.container .list-group-item:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Product Cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #000; /* Black color for product names */
+}
+
+.card h4 {
+    color: #6c757d; /* Muted gray color for price */
+    font-weight: normal; /* Remove bolding */
+    margin-top: 5px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Layout Adjustments */
+.row .col-sm-3 {
+    flex: 0 0 25%; /* Sidebar takes up 25% */
+}
+
+.row .col-sm-9 {
+    flex: 0 0 70%; /* Products section takes up 70% */
+    padding-left: 20px; /* Add spacing between sidebar and products */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .col-sm-3 {
+        margin-bottom: 20px;
+    }
+
+    .row .col-sm-3 {
+        flex: 0 0 100%; /* Sidebar takes full width on smaller screens */
+    }
+
+    .row .col-sm-9 {
+        flex: 0 0 100%; /* Products section takes full width on smaller screens */
+    }
+}
